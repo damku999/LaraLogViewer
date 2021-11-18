@@ -1,0 +1,58 @@
+{
+    "name": "webmonks/laravel-log-viewer",
+    "description": "Provides a Log Viewer for Laravel",
+    "keywords": ["webmonks", "laravel", "log", "log viewer", "laravel-log-viewer", "logviewer"],
+    "homepage": "https://github.com/damku999/LaraLogViewer",
+    "authors": [{
+        "name": "Darshan Baraiya",
+        "email": "webmonks.in@gmail.com",
+        "homepage": "https://github.com/damku999/",
+        "role": "Developer"
+    }],
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^7.3|^8.0",
+        "ext-json": "*",
+        "webmonks/support": "^1.0",
+        "psr/log": "^1.1"
+    },
+    "require-dev": {
+        "laravel/framework": "^8.19",
+        "mockery/mockery": "^1.4.2",
+        "orchestra/testbench-core": "^6.4",
+        "phpunit/phpunit": "^9.3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Webmonks\\LaraLogViewer\\": "src/"
+        },
+        "files": ["helpers.php"]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Webmonks\\LaraLogViewer\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --colors=always",
+        "test:dox": "phpunit --testdox --colors=always",
+        "test:cov": "phpunit --coverage-html coverage"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-develop": "8.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Webmonks\\LaraLogViewer\\LaraLogViewerServiceProvider",
+                "Webmonks\\LaraLogViewer\\Providers\\DeferredServicesProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
