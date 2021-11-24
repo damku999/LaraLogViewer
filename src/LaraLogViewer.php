@@ -24,7 +24,7 @@ class LaraLogViewer implements LaraLogViewerContract
     /**
      * LaraLogViewer Version
      */
-    const VERSION = '8.1.0';
+    const VERSION = '1.0.0';
 
     /* -----------------------------------------------------------------
      |  Properties

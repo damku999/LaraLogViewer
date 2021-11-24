@@ -43,9 +43,9 @@ class LaraLogViewerServiceProvider extends PackageServiceProvider
 
         $this->registerCommands([
             Commands\PublishCommand::class,
-        //     Commands\StatsCommand::class,
-        //     Commands\CheckCommand::class,
-        //     Commands\ClearCommand::class,
+            Commands\StatsCommand::class,
+            Commands\CheckCommand::class,
+            Commands\ClearCommand::class,
         ]);
     }
 
